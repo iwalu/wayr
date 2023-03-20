@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Displaying Text Directions With setPanel()</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="index.js"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="floating-panel">
+      <strong id="destText">Destination:</strong>
+      <!--<select id="end">
+         <option value="">Selectionner une destination</option>
+        <option value="Festival des Glaces, CotonouD">Festival des Glaces, Cotonou</option>
+        <option value="L'Africaine Vie Bénin, Cotonou">AAVIE</option>
+        <option value="Dreamxr, Cotonou">Dreamxr, Cotonou</option>
+        <option value="Pharmacie Segbeya, Rue 1254, Cotonou">Pharmacie Segbeya, Cotonou</option>
+        <option value="Centre de Santé de Zogbo, 99HQ+8HX, Rue 2723, Cotonou">Centre de Santé de Zogbo</option>
+        <option value="Hotel De La Cite Houeyiho, Cotonou">Hotel De La Cite Houeyiho</option>
+        <option value="Kaftia Co Sarl, Cotonou">Kaftia Co Sarl</option>
+        <option value="Bon Voyage Hôtel, Cotonou">Bon Voyage Hôtel</option>
+        <option value="Etoile Rouge, Cotonou">Etoile Rouge</option>
+        <option value="Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey">Rectorat UAC</option>
+      </select>-->
+
+      <input type="radio" id="end" name="end1" value="Dreamxr, Cotonou">
+      <label for="end1">Dreamxr, Cotonou</label><br>
+
+      <input type="radio" id="end" name="end2" value="Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey">
+      <label for="end2">Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey</label><br>
+
+
+      <button id="startWa" style="display: none;" onclick="startWalkings()">Demarrer la navigation</button>
+      <button id="stopWa" style="display: none;" onclick="stopWalkings()">Arreter la navigation</button>
+      <button id="seeAR" style="display: none;" onclick="openAR()">Voir en AR</button>
+    </div>
+    
+    <div hidden><p id="lat"></p><p id="long"></p></div>
+    <div id="container">
+      
+      <div id="map">
+        
+      </div>
+      <div id="sidebar">
+      </div>
+      
+
+      <div class="card">
+        <img src="./img/34g.jpg" alt="An image">
+        <div class="card-content">
+          <h2>Rectorat de l'Université d'Abomey-Calavi</h2>
+          <p>Rectorat, Calavi</p>
+          <button class="btn btn--blue" onclick="startWalkings(this.getAttribute('data-end'))" data-end="Ecole Polytechnique d'Abomey Calavi (EPAC), Godomey">Itinéraire</button>
+        </div>
+      </div>
+
+     
+
+
+    </div>
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Xs9VPCcxeUWRqoH8scsdzRSto4actzc&region=FR&language=fr&callback=initMap"
+    ></script>
+ 
+        <!-- <strong>End:</strong>
+        <select id="start">
+          <option value="st louis, mo">St Louis</option>
+          <option value="joplin, mo">Joplin, MO</option>
+          <option value="oklahoma city, ok">Oklahoma City</option>
+          <option value="amarillo, tx">Amarillo</option>
+          <option value="gallup, nm">Gallup, NM</option>
+          <option value="flagstaff, az">Flagstaff, AZ</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="barstow, ca">Barstow</option>
+          <option value="san bernardino, ca">San Bernardino</option>
+          <option value="los angeles, ca">Los Angeles</option>
+        </select> 
+        <br />
+        <strong>End:</strong>
+        <select id="end">
+          <option value="chicago, il">Chicago</option>
+          <option value="st louis, mo">St Louis</option>
+          <option value="joplin, mo">Joplin, MO</option>
+          <option value="oklahoma city, ok">Oklahoma City</option>
+          <option value="amarillo, tx">Amarillo</option>
+          <option value="gallup, nm">Gallup, NM</option>
+          <option value="flagstaff, az">Flagstaff, AZ</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="barstow, ca">Barstow</option>
+          <option value="san bernardino, ca">San Bernardino</option>
+          <option value="los angeles, ca">Los Angeles</option>
+        </select>
+      </div>
+    </div> -->
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    
+  </body>
+</html>
